@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My Project</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            text-align: center;
+            background: #f2f2f2;
+            padding: 50px;
+        }
+
+        .box {
+            background: white;
+            padding: 30px;
+            width: 400px;
+            margin: auto;
+            border-radius: 10px;
+        }
+
+        input, button {
+            padding: 10px;
+            margin: 10px;
+        }
+
+        button {
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="box">
+        <h1>My Project</h1>
+
+        <p>Enter your input:</p>
+
+        <input type="text" id="input" placeholder="Enter something">
+
+        <br>
+
+        <button onclick="submitData()">Submit</button>
+
+        <h3 id="result"></h3>
+    </div>
+
+    <script>
+        function submitData() {
+            let value = document.getElementById("input").value;
+
+            document.getElementById("result").innerHTML =
+                "You entered: " + value;
+        }
+    </script>
+
+</body>
+</html>
